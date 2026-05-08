@@ -67,7 +67,7 @@ To propose a new dataset:
 1. **Open a submission issue**
    1. Go to the repository’s **Issues** tab
    2. Click **New issue**
-   3. Select the **Add dataset** issue template
+   3. Select the **Add Dataset Entry to TopDat-ED** issue template
 
 2. **Fill out the issue form**
    1. Enter the dataset title, year, and URL
