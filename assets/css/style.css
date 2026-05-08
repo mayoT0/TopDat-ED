@@ -38,21 +38,16 @@ body {
 }
 
 /* =========================
-   Search
+   Citation
 ========================= */
 
-.search-section {
-  padding: 20px;
+.citation-banner {
   text-align: center;
-}
-
-#searchInput {
-  width: 90%;
-  max-width: 600px;
+  font-weight: bold;
+  margin: 20px;
   padding: 12px;
+  background: #eef2ff;
   border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 16px;
 }
 
 /* =========================
