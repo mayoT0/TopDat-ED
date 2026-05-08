@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Dataset Directory</title>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- PapaParse for CSV parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+
+<body>
+
+  <!-- =========================
+       Banner
+  ========================== -->
+  <header class="hero">
+    <img
+      src="assets/banner.png"
+      alt="Repository Banner"
+      class="banner"
+    />
+
+    <div class="hero-text">
+      <h1>Research Dataset Directory</h1>
+
+      <p>
+        Explore datasets using searchable tables and multi-select filters.
+        The CSV is the single source of truth.
+      </p>
+    </div>
+  </header>
+
+  <!-- =========================
+       Search
+  ========================== -->
+  <section class="search-section">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Type a term to search titles (e.g., map or grid)"
+    />
+  </section>
+
+  <!-- =========================
+       Filters
+  ========================== -->
+  <section class="filters">
+
+    <div class="filter-group">
+      <h3>Domain</h3>
+      <div id="domainFilters" class="button-group"></div>
+    </div>
+
+    <div class="filter-group">
+      <h3>Representation</h3>
+      <div id="representationFilters" class="button-group"></div>
+    </div>
+
+    <div class="filter-group">
+      <h3>Realism</h3>
+      <div id="realismFilters" class="button-group"></div>
+    </div>
+
+    <div class="filter-group">
+      <h3>Scale</h3>
+      <div id="scaleFilters" class="button-group"></div>
+    </div>
+
+    <div class="controls">
+      <button id="clearFilters">Clear Filters</button>
+      <button id="refreshData">Refresh CSV</button>
+    </div>
+  </section>
+
+  <!-- =========================
+       Table
+  ========================== -->
+  <main class="table-wrapper">
+    <table id="catalogTable">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Domain</th>
+          <th>Title</th>
+          <th>Representation</th>
+          <th>Realism</th>
+          <th>Scale</th>
+          <th>URL</th>
+          <th>Author</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- Injected by JS -->
+      </tbody>
+    </table>
+  </main>
+
+  <!-- =========================
+       Footer Logo
+  ========================== -->
+  <footer class="footer">
+    <img
+      src="assets/logo.png"
+      alt="Logo"
+      class="footer-logo"
+    />
+  </footer>
+
+  <script src="assets/js/catalog.js"></script>
+</body>
+</html>
