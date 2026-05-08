@@ -1,4 +1,4 @@
-const CSV_PATH = "_data/catalog.csv";
+const CSV_PATH = "data/catalog.csv";
 
 let catalogData = [];
 
