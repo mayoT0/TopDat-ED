@@ -9,7 +9,6 @@ const activeFilters = {
   scale: new Set()
 };
 
-const searchInput = document.getElementById("searchInput");
 const tableBody = document.querySelector("#catalogTable tbody");
 
 /* =========================
@@ -145,14 +144,7 @@ function createFilterButtons(filterKey, values, containerId) {
 
 function applyFilters() {
 
-  const searchTerm = searchInput.value
-    .toLowerCase()
-    .trim();
-
   const filtered = catalogData.filter(item => {
-
-    const titleMatch =
-      item.title.toLowerCase().includes(searchTerm);
 
     const domainMatch =
       activeFilters.domain.size === 0 ||
@@ -171,7 +163,6 @@ function applyFilters() {
       activeFilters.scale.has(item.scale);
 
     return (
-      titleMatch &&
       domainMatch &&
       representationMatch &&
       realismMatch &&
@@ -229,8 +220,6 @@ function renderTable(data) {
 /* =========================
    Events
 ========================= */
-
-searchInput.addEventListener("input", applyFilters);
 
 document
   .getElementById("clearFilters")
