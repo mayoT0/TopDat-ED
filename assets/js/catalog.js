@@ -9,7 +9,6 @@ const activeFilters = {
   scale: new Set()
 };
 
-const searchInput = document.getElementById("searchInput");
 const tableBody = document.querySelector("#catalogTable tbody");
 
 /* =========================
