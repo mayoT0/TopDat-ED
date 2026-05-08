@@ -22,29 +22,28 @@ async function loadCSV() {
     header: true,
     skipEmptyLines: true,
 
-    complete: function(results) {
+complete: function(results) {
 
-      console.log("CSV Loaded:", results);
+  console.log("CSV Loaded:", results);
 
-      catalogData = results.data;
+  if (!results.data || results.data.length === 0) {
+    console.error("CSV loaded but EMPTY or invalid");
 
-      buildFilters(catalogData);
-      renderTable(catalogData);
-    },
+    tableBody.innerHTML = `
+      <tr>
+        <td colspan="8">
+          CSV loaded but no data found (check file path or format)
+        </td>
+      </tr>
+    `;
 
-    error: function(error) {
+    return;
+  }
 
-      console.error("CSV Load Error:", error);
+  catalogData = results.data;
 
-      tableBody.innerHTML = `
-        <tr>
-          <td colspan="8">
-            Failed to load catalog.csv
-          </td>
-        </tr>
-      `;
-    }
-  });
+  buildFilters(catalogData);
+  renderTable(catalogData);
 }
 
 /* =========================
