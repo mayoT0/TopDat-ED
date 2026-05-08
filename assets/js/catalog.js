@@ -12,7 +12,7 @@ const activeFilters = {
 const tableBody = document.querySelector("#catalogTable tbody");
 
 /* =========================
-   INIT (safe DOM load)
+   INIT
 ========================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -22,6 +22,21 @@ document.addEventListener("DOMContentLoaded", () => {
   if (refreshBtn) {
     refreshBtn.addEventListener("click", loadCSV);
   }
+});
+
+document.getElementById("clearFilters").addEventListener("click", () => {
+
+  Object.keys(activeFilters).forEach(key => {
+    activeFilters[key].clear();
+  });
+
+  document
+    .querySelectorAll(".filter-btn")
+    .forEach(btn => btn.classList.remove("active"));
+
+  if (searchInput) searchInput.value = "";
+
+  applyFilters();
 });
 
 /* =========================
