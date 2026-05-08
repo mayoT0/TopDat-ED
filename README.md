@@ -73,7 +73,7 @@ To propose a new dataset:
    1. Enter the dataset title, year, and URL
    2. Choose the appropriate domain, representation, realism, and scale
    3. Submit the issue
-   4. 
+
 ---
 
 <p align="center">
