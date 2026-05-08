@@ -171,7 +171,6 @@ function applyFilters() {
       activeFilters.scale.has(item.scale);
 
     return (
-      titleMatch &&
       domainMatch &&
       representationMatch &&
       realismMatch &&
