@@ -59,4 +59,6 @@ pages={XX--XX},
 doi = {}
 }
 ```
-![TopDat-ED](assets/logo.png)
+<p align="center">
+  <img src="assets/logo.png" alt="Repository Logo" width="200">
+</p>
