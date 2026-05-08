@@ -37,7 +37,6 @@ Example searches:
 
 ## Metadata
 
-| Column |
 | `year` |
 | `domain` |
 | `representation` |
