@@ -24,10 +24,26 @@ async function loadCSV() {
     skipEmptyLines: true,
 
     complete: function(results) {
+
+      console.log("CSV Loaded:", results);
+
       catalogData = results.data;
 
       buildFilters(catalogData);
       renderTable(catalogData);
+    },
+
+    error: function(error) {
+
+      console.error("CSV Load Error:", error);
+
+      tableBody.innerHTML = `
+        <tr>
+          <td colspan="8">
+            Failed to load catalog.csv
+          </td>
+        </tr>
+      `;
     }
   });
 }
@@ -36,26 +52,52 @@ async function loadCSV() {
    Build Filter Buttons
 ========================= */
 
+function clearFilterContainers() {
+  const containers = [
+    "domainFilters",
+    "representationFilters",
+    "realismFilters",
+    "scaleFilters"
+  ];
+
+  containers.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = "";
+  });
+}
+
 function buildFilters(data) {
 
+  // Safety check: ensure data exists
+  if (!Array.isArray(data) || data.length === 0) {
+    console.warn("buildFilters: No data provided or empty dataset");
+    return;
+  }
+
+  clearFilterContainers();
+
+  // Domain
   createFilterButtons(
     "domain",
     getUniqueValues(data, "domain"),
     "domainFilters"
   );
 
+  // Representation
   createFilterButtons(
     "representation",
     getUniqueValues(data, "representation"),
     "representationFilters"
   );
 
+  // Realism
   createFilterButtons(
     "realism",
     getUniqueValues(data, "realism"),
     "realismFilters"
   );
 
+  // Scale
   createFilterButtons(
     "scale",
     getUniqueValues(data, "scale"),
