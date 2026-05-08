@@ -53,7 +53,7 @@ To cite the dataset:
 @InProceedings{onabanjo2025topdated,
 title={TopDat-ED: A Topology-Aware Electrical Dataset Directory for Machine Learning},
 author={Onabanjo, Olumayowa and Díaz Piloñeta, Marina and Martinez-Huerta, Gemma and Ortega-Fernández, Francisco and Moreno-García, Carlos Francisco},
-booktitle={26th International Conference on Environment and Electrical Engineering},
+booktitle={26th International Conference on Environment and Electrical Engineering (EEEIC 2026)},
 year={2026},
 publisher={IEEE},
 pages={XX--XX},
