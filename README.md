@@ -34,3 +34,31 @@ Example searches:
 - `pcb`
 
 ---
+
+## Metadata
+
+| Column |
+|---|---|
+| `year` |
+| `domain` |
+| `representation` |
+| `realism` |
+| `scale` |
+| `title` |
+| `url` |
+| `author` |
+
+# Please cite our paper if you use this directory.
+To cite the dataset:
+
+```bibtex
+@InProceedings{onabanjo2025topdated,
+title={TopDat-ED: A Topology-Aware Electrical Dataset Directory for Machine Learning},
+author={Onabanjo, Olumayowa and Díaz Piloñeta, Marina and Martinez-Huerta, Gemma and Ortega-Fernández, Francisco and Moreno-García, Carlos Francisco},
+booktitle={26th International Conference on Environment and Electrical Engineering},
+year={2026},
+publisher={IEEE},
+pages={XX--XX},
+doi = {}
+}
+```
