@@ -1,0 +1,84 @@
+name: "Add Dataset Entry to TopDat-ED"
+description: "Submit a new dataset entry for catalog.csv"
+title: "[TopDat-ED]: "
+labels: ["dataset-submission-template"]
+body:
+
+  - type: input
+    id: year
+    attributes:
+      label: Year
+      description: Publication year of the dataset or latest update year
+      placeholder: "2024"
+    validations:
+      required: true
+
+  - type: input
+    id: domain
+    attributes:
+      label: Domain
+      description: e.g. Electronics, Power, Infrastructure
+      placeholder: "Electronics"
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      placeholder: "Dataset A"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: representation
+    attributes:
+      label: Representation
+      options:
+        - Attributed Graph
+        - Fully Annotated Image
+        - Multimodal Graph
+        - Partially Annotated Image
+        - Raw Image
+        - Symbolic format
+        - Tabular
+        - Vectorized
+    validations:
+      required: true
+
+  - type: dropdown
+    id: realism
+    attributes:
+      label: Realism
+      options:
+        - Real
+        - Synthetic
+        - Anonymized
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scale
+    attributes:
+      label: Scale
+      options:
+        - Small/Single-domain
+        - Large-Benchmark
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      placeholder: "https://github.com/example/dataset"
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: Author
+      placeholder: "Author Name"
+    validations:
+      required: true
