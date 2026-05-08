@@ -62,3 +62,7 @@ doi = {}
 <p align="center">
   <img src="assets/logo.png" alt="Repository Logo" width="200">
 </p>
+
+# Update Requests
+
+To propose a new dataset, please open an issue using the **Add dataset** template.
