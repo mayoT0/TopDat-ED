@@ -47,7 +47,6 @@ Example searches:
 | `author` |
 
 # Please cite our paper if you use this directory.
-To cite the dataset:
 
 ```bibtex
 @InProceedings{onabanjo2025topdated,
@@ -60,3 +59,4 @@ pages={XX--XX},
 doi = {}
 }
 ```
+![TopDat-ED](assets/logo.png)
