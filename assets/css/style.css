@@ -42,12 +42,18 @@ body {
 ========================= */
 
 .citation-banner {
-  text-align: center;
+  text-align: left;
   font-weight: bold;
   margin: 20px;
   padding: 12px;
   background: #eef2ff;
   border-radius: 10px;
+
+  /* optional safety for long text */
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* =========================
