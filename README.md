@@ -7,7 +7,7 @@
 Explore electrical topology datasets using a searchable and filterable directory at [TopDat-ED](https://mayot0.github.io/TopDat-ED/):
 
 - Multi-select navigation filters
-- Search-by-title functionality
+- Community updates via pull requests
 
 ---
 
